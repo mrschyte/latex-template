@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[magyar]{babel}
+\usepackage[final]{pdfpages}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage[bookmarks=true, colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+%\usepackage{venturis2}
+\usepackage{tgtermes}
+%\usepackage{palatino}
+
+%\usepackage[scaled]{helvet}
+%\usepackage[lf]{venturis}
+%\usepackage{arial}
+\usepackage{amsfonts}
+%\usepackage{lmodern}
+
+%\renewcommand*\familydefault{\sfdefault}
+
+%\usepackage{mathdesign}
+
+\title{Latex template}
+\author{Szerző Antal}
+\frenchspacing
+
+\begin{document}
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% theorems, definitions
+\newtheorem{theorem}{Tétel}[section]
+\newtheorem{corollary}[theorem]{Következmény}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Megjegyzés}
+\newtheorem*{assertion}{Állítás}
+\newtheorem*{consequence}{Következmény}
+\newtheorem*{notation}{Jelölés}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definíció}[section]
+
+\section{Tételek, bizonyítások}
+Ebben a részben a latex, tétel és bizonytás környezetét mutatjuk be.
+
+\begin{theorem}[A latex hatékonyságáról]
+\label{th:latex:efficiency}
+A latex-et könnyű használni.
+\end{theorem}
+
+\begin{proof}
+Ez gyakorlott szakember számára igaz, de minden latex-et használó ember
+gyakorlott szakember, így ebből következik \aref{th:latex:efficiency} állítás.
+\[ \sum_{i = 0}^\infty \frac{\binom{n}{k / i}}{2^i} \]
+\end{proof}
+
+\begin{corollary}
+A {\LaTeX} egy jó program.
+\end{corollary}
+
+\begin{definition}[LaTeX]
+A latex egy szövegszerkesztő program.
+\end{definition}
+\end{document}
